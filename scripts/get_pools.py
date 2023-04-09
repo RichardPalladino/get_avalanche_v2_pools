@@ -97,6 +97,7 @@ def main() -> None:
     active_network = network.show_active()
 
     for factory_name, num_pools in factories.items():
+        print(f"{factory_name} has {num_pools} pools")
         try:
             factory = interface.IUniswapV2Factory(
                 config["networks"][active_network]["factories"][factory_name]
